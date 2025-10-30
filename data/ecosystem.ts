@@ -14,17 +14,17 @@ export const categories = [
 export type Category = typeof categories[number];
 
 export const categoryLabels: Record<Category, string> = {
-  client_api: 'Client API',
-  client_wrapper: 'Client Wrapper',
-  database_integration: 'Database Integration',
+  client_api: '客户端 API',
+  client_wrapper: '客户端封装',
+  database_integration: '数据库集成',
   io: 'IO',
-  logging: 'Logging',
-  observability: 'Observability',
-  protocol_handlers: 'Protocol Handlers',
-  search_and_query: 'Search and Query',
-  security_plugins: 'Security Plugins',
-  stream_processing: 'Stream Processing',
-  tools: 'Tools'
+  logging: '日志',
+  observability: '可观测性',
+  protocol_handlers: '协议处理器',
+  search_and_query: '搜索与查询',
+  security_plugins: '安全插件',
+  stream_processing: '流处理',
+  tools: '工具'
 };
 
 export type Resource = {
