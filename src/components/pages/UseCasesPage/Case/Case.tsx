@@ -23,12 +23,12 @@ const Case: React.FC<CaseProps> = (props) => {
     case 'check': icon = s.check; break;
   }
     const docsLink = (props.docsLink) ? (<Button
-        title='Read docs'
+        title='查看文档'
         variant='regular'
         href={`/docs/${latestVersion}/${props.docsLink}`}
       />) : ('');
       const caseLink = (props.caseLink) ? (<Button
-        title='Explore case studies'
+        title='查看更多案例研究'
         variant='clean'
         href={`/case-studies/`}
       />) : ('');

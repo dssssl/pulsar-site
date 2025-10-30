@@ -20,27 +20,27 @@ const ShortInfo: React.FC = () => {
           <div className={s.docs_container}>
             <h1 className={s.header}>
               <span className={s.title}>Apache Pulsar™</span><br />
-              <span className={s.subtitle}>Cloud-Native, Distributed Messaging and Streaming</span>
+              <span className={s.subtitle}>云原生的分布式消息与流式平台</span>
             </h1>
-            <span className={s.text}>Apache Pulsar is an open-source, distributed messaging and streaming platform built for the cloud. </span>
+            <span className={s.text}>Apache Pulsar 是面向云环境构建的开源分布式消息与流式处理平台。</span>
 
             <div className={s.buttons}>
               <Button
-                title='Explore docs'
+                title='浏览文档'
                 variant='action'
                 href={`${siteConfig.baseUrl}docs/${latestVersion}`}
               />
               <Button
-                title='Quickstart'
+                title='快速开始'
                 variant='regular'
                 href={`${siteConfig.baseUrl}docs/${latestVersion}/concepts-overview`}
               />
             </div>
 
             <p className={s.case_studies}>
-              Pulsar is proven at scale by hundreds of companies of different sizes, serving millions of messages per second.
+              Pulsar 在不同规模的数百家公司中稳定运行，每秒可处理数百万条消息。
               <br />
-              <a href="/case-studies">See case studies</a>
+              <a href="/case-studies">查看案例研究</a>
             </p>
           </div>
         </Parallax>
@@ -52,22 +52,22 @@ const ShortInfo: React.FC = () => {
         <div className={s.container}>
           <div className={s.info_container}>
             <ScreenTitle>
-              What is Pulsar
+              什么是 Pulsar
             </ScreenTitle>
 
             <p>
-              Apache Pulsar is an all-in-one messaging and streaming platform.
-              Messages can be consumed and acknowledged individually or consumed as streams with <strong>less than 10ms of latency</strong>.
-              Its layered architecture allows <strong>rapid scaling</strong> across hundreds of nodes, <strong>without data reshuffling</strong>.
+              Apache Pulsar 是一体化的消息与流式平台。
+              消息既可以逐条消费并确认，也可以以流式方式消费，端到端延迟<strong>低于 10 毫秒</strong>。
+              分层架构支持在数百个节点之间<strong>快速扩展</strong>，并且<strong>无需迁移存量数据</strong>。
             </p>
 
             <p>
-              Its features include <strong>multi-tenancy</strong> with resource separation and access control, <strong>geo-replication</strong> across regions, <strong>tiered storage</strong> and support for six official client languages.
-              It supports up to one million unique topics and is designed to simplify your application architecture.
+              Pulsar 内置<strong>多租户</strong>能力，可实现资源隔离和访问控制，支持跨地域的<strong>地理复制</strong>、<strong>分层存储</strong>以及六种官方客户端语言。
+              单个集群最多可支撑一百万个独立主题，帮助简化应用架构。
             </p>
 
             <p>
-              Pulsar is a Top 10 Apache Software Foundation project and has a vibrant and passionate community and user base spanning small companies and large enterprises.
+              Pulsar 是 Apache 软件基金会的十大活跃项目之一，拥有充满活力的社区与用户，覆盖初创公司到大型企业。
             </p>
           </div>
         </div>

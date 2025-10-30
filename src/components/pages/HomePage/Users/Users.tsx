@@ -20,17 +20,16 @@ const Users: React.FC = () => {
       <div className={s.container}>
         <div className={s.title_container}>
           <ScreenTitle>
-            Pulsar Users
+            Pulsar 用户
           </ScreenTitle>
 
           <span className={s.text}>
-            Run in production at scale with millions of messages per second across millions of topics,
-            Pulsar is now used by thousands of companies for real-time workloads.
+            Pulsar 在生产环境中支撑数百万主题、每秒数百万条消息，如今已有成千上万的企业使用它处理实时工作负载。
           </span>
 
           <div className={s.link_button}>
             <Button
-              title='See case studies'
+              title='查看案例研究'
               variant='regular'
               href={`${siteConfig.baseUrl}case-studies`}
             />
