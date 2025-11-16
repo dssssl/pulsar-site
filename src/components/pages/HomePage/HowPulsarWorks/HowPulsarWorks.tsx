@@ -14,50 +14,48 @@ import Slider from '@site/src/components/ui/Slider/Slider';
 
 const cards: CardProps[] = [
   {
-    title: 'Producer & Consumer',
+    title: '生产者与消费者',
     image: <ProducerAndConsumerIcon />,
     children: (
       <p>
-        A Pulsar client contains a consumer and a producer.
-        A producer writes messages on a topic.
-        A consumer reads messages from a topic and acknowledges specific messages or all up to a specific message.
+        一个 Pulsar 客户端同时包含生产者与消费者。
+        生产者向某个主题写入消息。
+        消费者从主题读取消息，并且可以逐条确认，也可以一次性确认到特定消息为止。
       </p>
     )
   },
   {
-    title: 'Apache Zookeeper',
+    title: 'Apache ZooKeeper',
     image: <ZookeeperIcon />,
     children: (
       <p>
-        Pulsar and BookKeeper use Apache ZooKeeper to save metadata coordinated between nodes,
-        such as a list of ledgers per topic, segments per ledger, and mapping of topic bundles to a broker.
-        It’s a cluster of highly available and replicated servers (usually 3).
+        Pulsar 和 BookKeeper 使用 Apache ZooKeeper 保存节点间协调所需的元数据，
+        例如每个主题包含的账本列表、账本的分段信息以及主题分片到 Broker 的映射。
+        ZooKeeper 集群通常由三个节点组成，具备高可用与副本机制。
       </p>
     )
   },
   {
-    title: 'Pulsar Brokers',
+    title: 'Pulsar Broker',
     image: <BrokersIcon />,
     children: (
       <p>
-        Topics (i.e., partitions) are divided among Pulsar brokers.
-        A broker receives messages for a topic and appends them to the topic’s active virtual file (a.k.a ledger),
-        hosted on the Bookkeeper cluster. Brokers read messages from the cache (mostly) or BookKeeper and dispatch them to the consumers.
-        Brokers also receive message acknowledgments and persist them to the BookKeeper cluster as well.
-        Brokers are stateless (don't use/need a disk).
+        各个主题（即分区）会分布在不同的 Pulsar Broker 上。
+        Broker 接收某个主题的消息后，会将其追加写入托管在 BookKeeper 集群上的活动虚拟文件（即账本）。
+        Broker 从缓存（通常）或 BookKeeper 读取消息并投递给消费者，同时接收确认并写入 BookKeeper。
+        Broker 自身是无状态的，不依赖本地磁盘。
       </p>
     )
   },
   {
-    title: 'Apache Bookkeeper',
+    title: 'Apache BookKeeper',
     image: <BookkeeperIcon />,
     children: (
       <p>
-        Apache BookKeeper is a cluster of nodes called bookies.
-        Each virtual file (a.k.a ledger) is divided into consecutive segments, and each segment is kept on 3 bookies by default
-        (replicated by the client - i.e., the broker).
-        Operators can add bookies rapidly since no data reshuffling (moving) between them is required.
-        They immediately share the incoming write load.
+        Apache BookKeeper 由一组称为 bookie 的节点构成。
+        每个虚拟文件（即账本）会被切分为连续的分段，默认每个分段会复制到 3 个 bookie 上（由客户端，也就是 Broker，完成复制）。
+        由于无需在节点之间迁移数据，运维人员可以快速新增 bookie。
+        新增节点会立即分担写入压力。
       </p>
     )
   }
@@ -67,7 +65,7 @@ const HowPulsarWorks: React.FC = () => {
   return (
     <section className={s.HowPulsarWorks}>
       <div className={s.Container}>
-        <ScreenTitle>How does Pulsar work</ScreenTitle>
+        <ScreenTitle>Pulsar 如何运作</ScreenTitle>
 
         <div dangerouslySetInnerHTML={{ __html: illustrationDesktop }} className={s.IllustrationDesktop} />
         <div dangerouslySetInnerHTML={{ __html: illustrationMobile }} className={s.IllustrationMobile} />

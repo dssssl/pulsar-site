@@ -57,54 +57,52 @@ const HowToContribute: React.FC = () => {
     {
       id: "contributing-to-the-project",
       href: useBaseUrl("/contribute"),
-      text: "Contribution guide",
+      text: "贡献指南",
       type: "transparentBlack",
     },
     {
       id: "develop-coding-conventions",
       href: useBaseUrl("/contribute/develop-coding-conventions"),
-      text: "Coding conventions",
+      text: "编码约定",
       type: "transparentBlack",
     },
   ];
   const contentCards: ContentCardProps[] = [
     {
       format: "column",
-      title: "Contributing to the Project",
+      title: "参与项目贡献",
       image: {
         src: useBaseUrl("/img/community_blt.svg"),
       },
       description: (
         <div>
-          Pulsar has many different opportunities for contributions — you can write new examples/tutorials, add new user-facing libraries, write new Pulsar IO connectors, participate in documentation, and more.
+          Pulsar 拥有丰富的贡献机会——可以撰写示例/教程、构建新的面向用户的库、开发 Pulsar IO Connector、完善文档等。
         </div>
       ),
     },
     {
       format: "column",
-      title: "Reporting Bugs",
+      title: "报告缺陷",
       image: {
         src: useBaseUrl("/img/community_bug.svg"),
       },
       description: (
         <div>
-          If you encounter a problem with Pulsar, the first places to ask for help are the user mailing list or Stack Overflow.
-          <br />
-          If, after having asked for help, you suspect that you have found a bug in Pulsar, you should report it to the developer mailing list or by opening GitHub Issue. Please provide as much detail as you can on your problem. Don&apos;t forget to indicate which version of Pulsar you are running and on which environment.
+          如果遇到问题，首先请在用户邮件列表或 Stack Overflow 寻求帮助。<br />
+          若确认可能是 Pulsar 的缺陷，可发送至开发者邮件列表或在 GitHub 提交 Issue。请尽可能提供详细信息，包括 Pulsar 版本与运行环境。
         </div>
       ),
     },
     {
       format: "column",
-      title: "Reporting a Vulnerability",
+      title: "报告安全漏洞",
       image: {
         src: useBaseUrl("/img/community_shld.svg"),
       },
       description: (
         <div>
-          To report a vulnerability for Pulsar, contact the <a href="https://www.apache.org/security/projects.html">Apache Security Team</a>.
-          <br />
-          The process for reporting a vulnerability is outlined <a href="https://www.apache.org/security/" target="_blank">here</a>. When reporting a vulnerability to <a href="mailto:security@apache.org">security@apache.org</a>, you can copy your email to <a href="mailto:private@pulsar.apache.org">private@pulsar.apache.org</a> to send your report to the Apache Pulsar Project Management Committee. This is a private mailing list.
+          要报告 Pulsar 的安全漏洞，请联系 <a href="https://www.apache.org/security/projects.html">Apache 安全团队</a>。<br />
+          相关流程详见 <a href="https://www.apache.org/security/" target="_blank">官方说明</a>。向 <a href="mailto:security@apache.org">security@apache.org</a> 报告时，可以抄送 <a href="mailto:private@pulsar.apache.org">private@pulsar.apache.org</a>，直接联系 Apache Pulsar PMC（私有邮件列表）。
         </div>
       ),
     },

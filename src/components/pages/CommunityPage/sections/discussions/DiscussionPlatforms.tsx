@@ -73,32 +73,31 @@ const ActionButton: React.FC<ActionButtonProps> = (props) => {
 const DiscussionPlatforms: React.FC = () => {
   const platforms: ContentCardProps[] = [
     {
-      title: "Slack",
+      title: "Slack 社区",
       description: (
         <span>
-          Use it for instant messaging and real-time discussions.
-          <br />
-          You can search the Slack discussions history on <a href="https://www.linen.dev/s/apache-pulsar" target="_blank">Linen</a>.
+          适用于即时沟通与实时讨论。<br />
+          你可以在 <a href="https://www.linen.dev/s/apache-pulsar" target="_blank">Linen</a> 搜索 Slack 历史记录。
         </span>
       ),
       actions: [
         {
           id: "join-slack",
-          text: "Join Slack",
+          text: "加入 Slack",
           href: "https://communityinviter.com/apps/apache-pulsar/apache-pulsar",
           type: "primary",
           isExternal: true,
         },
         {
           id: "launch-slack",
-          text: "Go to Slack",
+          text: "打开 Slack",
           href: "https://apache-pulsar.slack.com/",
           type: "normal",
           isExternal: true,
         },
         {
           id: "history-slack",
-          text: "Show History",
+          text: "查看历史记录",
           href: "https://www.linen.dev/s/apache-pulsar",
           isExternal: true,
           type: "normal",
@@ -109,22 +108,22 @@ const DiscussionPlatforms: React.FC = () => {
       },
     },
     {
-      title: "Developer Mailing List",
+      title: "开发者邮件列表",
       description: (
         <div>
-          Questions and discussions related to Pulsar development.
+          用于讨论 Pulsar 的开发问题与技术提案。
         </div>
       ),
       actions: [
         {
           id: "subscribe",
-          text: "Subscribe",
+          text: "订阅",
           href: "mailto:dev-subscribe@pulsar.apache.org?subject=subscribe&body=subscribe",
           type: "primary",
         },
         {
           id: "showarchives",
-          text: "Show Archives",
+          text: "查看归档",
           href: "https://lists.apache.org/list.html?dev@pulsar.apache.org",
           isExternal: true,
           type: "normal",
@@ -135,17 +134,16 @@ const DiscussionPlatforms: React.FC = () => {
       },
     },
     {
-      title: "Community Meetings",
+      title: "社区会议",
       description: (
         <span>
-          The community meeting occurs biweekly on Thursdays to
-          discuss new proposals, open pull requests, and host open discussions.
+          社区会议每两周一次（周四召开），用于讨论新提案、未合并的 PR，并分享开放议题。
         </span>
       ),
       actions: [
         {
           id: "learnmore",
-          text: "Learn More",
+          text: "了解详情",
           href: "https://github.com/apache/pulsar/wiki/Community-Meetings",
           type: "primary",
           isExternal: true,
@@ -156,24 +154,23 @@ const DiscussionPlatforms: React.FC = () => {
       },
     },
     {
-      title: "Discussions at GitHub",
+      title: "GitHub Discussions",
       description: (
         <div>
-          A good place to ask any question, bring an idea or get support.
-          Especially if you are not friends with mailing lists.
+          欢迎在此提问、分享想法或寻求支持——尤其适合不习惯邮件列表的同学。
         </div>
       ),
       actions: [
         {
           id: "new-discussion",
-          text: "New discussion",
+          text: "发起讨论",
           href: "https://github.com/apache/pulsar/discussions/new/choose",
           type: "primary",
           isExternal: true,
         },
         {
           id: "open",
-          text: "Browse discussions",
+          text: "浏览讨论",
           href: "https://github.com/apache/pulsar/discussions",
           type: "normal",
           isExternal: true,
@@ -187,100 +184,57 @@ const DiscussionPlatforms: React.FC = () => {
       title: "Stack Overflow",
       description: (
         <span>
-          For technical questions, we ask that you post them to Stack Overflow
-          using the tag apache-pulsar.
+          如需技术问答，请在 Stack Overflow 上使用 apache-pulsar 标签提问。
         </span>
       ),
       actions: [
         {
           id: "as",
-          text: "Ask question",
+          text: "提问",
           href: "https://stackoverflow.com/questions/ask?tags=apache-pulsar",
           type: "primary",
           isExternal: true,
         },
         {
-          id: "browse",
-          text: "Browse questions",
+          id: "visit",
+          text: "查看问题",
           href: "https://stackoverflow.com/questions/tagged/apache-pulsar",
           type: "normal",
           isExternal: true,
         },
       ],
       image: {
-        src: useBaseUrl("/img/community_so.svg"),
-      },
-    },
-    {
-      title: "User Mailing List",
-      description: (
-        <div>
-          General mailing list for user-related discussions.
-        </div>
-      ),
-      actions: [
-        {
-          id: "subscribe",
-          text: "Subscribe",
-          href: "mailto:users-subscribe@pulsar.apache.org?subject=subscribe&body=subscribe",
-          type: "primary",
-        },
-        {
-          id: "showarchives",
-          text: "Show Archives",
-          href: "https://lists.apache.org/list.html?users@pulsar.apache.org",
-          isExternal: true,
-          type: "normal",
-        },
-      ],
-      image: {
-        src: useBaseUrl("/img/community_email.svg"),
-      },
-    },
-    {
-      title: "WeChat",
-      description: (
-        <span>
-          Welcome to the unofficial Apache Pulsar Account at WeChat! The account
-          ID is ApachePulsar.
-        </span>
-      ),
-      actions: [{
-        id: "wechat",
-        text: "Go to WeChat",
-        href: "https://web.wechat.com/",
-        type: "primary",
-        isExternal: true,
-      }],
-      image: {
-        src: useBaseUrl("/img/community_wc.svg"),
+        src: useBaseUrl("/img/community_stack.svg"),
       },
     },
   ];
 
-  return <div>
-    <div className={s.DiscussionPlatformsDesktop}>{(platforms || []).map((card) => (
-        <div key={card.title} className={s.Card}>
-          <ContentCard {...card} />
+  return (
+    <div>
+      <div className={s.DiscussionPlatformDesktop}>
+        <div className={s.DiscussionPlatformCards}>
+          {(platforms || []).map((card) => (
+            <ContentCard {...card} key={card.title} />
+          ))}
         </div>
-      ))}</div>
-    <div className={s.DiscussionPlatformsMobile}>
-      <div className={s.Slider}>
-        <BrowserOnly>
-          {() => (
-            <Slider centerMode={window.innerWidth > 800} slidesToShow={2}>
-              {(platforms || []).map((card) => (
-                <div key={card.title} className={s.Card}>
-                  <ContentCard {...card} />
-                </div>
-              ))}
-            </Slider>
-          )}
-        </BrowserOnly>
+      </div>
+      <div className={s.DiscussionPlatformMobile}>
+        <div className={s.Slider}>
+          <BrowserOnly>
+            {() => (
+              <Slider slidesToShow={1}>
+                {(platforms || []).map((card) => (
+                  <div key={card.title} className={s.Card}>
+                    <ContentCard {...card} />
+                  </div>
+                ))}
+              </Slider>
+            )}
+          </BrowserOnly>
+        </div>
       </div>
     </div>
-  </div>;
+  );
 };
 
 export default DiscussionPlatforms;
-

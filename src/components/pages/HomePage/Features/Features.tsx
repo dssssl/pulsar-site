@@ -12,7 +12,7 @@ const Features = () => {
     <section className={s.block}>
       <div className={s.container}>
         <ScreenTitle>
-          Pulsar features
+          Pulsar 核心特性
         </ScreenTitle>
 
         <div className={s.features_container}>
@@ -62,7 +62,7 @@ const Features = () => {
         </div>
       </div>
       <div className={s.ButtonContainer}>
-        <Button title='Explore more features' variant='action' href='/features' />
+        <Button title='查看更多特性' variant='action' href='/features' />
       </div>
     </section>
   )

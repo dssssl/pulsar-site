@@ -8,14 +8,14 @@ const ProjectGovernance: React.FC = () => {
       description: (
         <div>
           <p>
-            Project Management Committee (PMC).<br />
-            Apache Pulsar is independently managed by its PMC, the governing body tasked with project management. 
+            项目管理委员会（PMC）<br />
+            Apache Pulsar 由独立的 PMC 治理，该组织负责项目管理工作。
           </p>
           <p>
-            Members are resposible for Technical direction, Voting on new committers and PMC members, Setting policies and Formally voting on software product releases.
+            PMC 成员负责确定技术方向、投票引入新的提交者与 PMC 成员、制定政策，以及就软件发行进行正式表决。
           </p>
           <p>
-            Learn more about <a href="https://community.apache.org/projectIndependence" title="Project independence overview" target="_blank">Project independence overview</a>, <a href="https://www.apache.org/foundation/governance/pmcs.html" title="PMCs" target="_blank">PMCs</a>, <a href="https://www.apache.org/foundation/voting.html" title="Voting process" target="_blank">Voting process</a> and <a href="https://www.apache.org/theapacheway/index.html" title="The Apache way guidelines" target="_blank">The Apache way guidelines</a>
+            了解更多：<a href="https://community.apache.org/projectIndependence" title="Project independence overview" target="_blank">项目独立性概述</a>、<a href="https://www.apache.org/foundation/governance/pmcs.html" title="PMCs" target="_blank">PMC 介绍</a>、<a href="https://www.apache.org/foundation/voting.html" title="Voting process" target="_blank">投票流程</a>以及 <a href="https://www.apache.org/theapacheway/index.html" title="The Apache way guidelines" target="_blank">Apache 之道</a>。
           </p>
         </div>
       ),

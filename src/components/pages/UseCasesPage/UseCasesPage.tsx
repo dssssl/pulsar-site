@@ -26,13 +26,13 @@ const UseCasesPage: React.FC = () => {
   }, [])
   return (
     <Layout
-      title='Pulsar Use Cases'
-      description='A combination of unique and common use cases sets Pulsar apart from other message brokers.'
+      title='Pulsar 使用场景'
+      description='独特与常见场景的组合让 Pulsar 在众多消息系统中脱颖而出。'
     >
         <div className={s.UseCasesPageHeader}>
           <div>
-            <h1>Pulsar Use Cases</h1>
-            <h2>A combination of unique and common use cases sets Pulsar apart from other message brokers.</h2>
+            <h1>Pulsar 使用场景</h1>
+            <h2>独特与常见场景的组合让 Pulsar 在众多消息系统中脱颖而出。</h2>
           </div>
         </div>
         <div className={s.UseCasesPage}>

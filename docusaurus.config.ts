@@ -132,6 +132,19 @@ module.exports = async function createConfigAsync() {
     favicon: "img/favicon.ico",
     organizationName: "apache",
     projectName: "pulsar",
+    i18n: {
+      defaultLocale: "zh-CN",
+      locales: ["zh-CN", "en"],
+      localeConfigs: {
+        "zh-CN": {
+          label: "简体中文",
+          htmlLang: "zh-CN",
+        },
+        en: {
+          label: "English",
+        },
+      },
+    },
     trailingSlash: true,
     markdown: {
       preprocessor: ({ filePath, fileContent }) => {
@@ -188,22 +201,22 @@ module.exports = async function createConfigAsync() {
           items: [
             {
               type: "dropdown",
-              label: "Get Started",
+              label: "开始使用",
               position: "left",
               items: [
                 {
                   to: `/docs/${latestVersion}/concepts-overview/`,
                   activeBaseRegex: `docs/(${versions.join('|')})/concepts-overview/$`,
-                  label: "Concepts",
+                  label: "概念",
                 },
                 {
                   to: `/docs/${latestVersion}/`,
                   activeBaseRegex: `docs/(${versions.join('|')})/$`,
-                  label: "Quickstart",
+                  label: "快速上手",
                 },
                 {
                   to: "/ecosystem/",
-                  label: "Ecosystem",
+                  label: "生态系统",
                 }
               ],
             },
@@ -211,107 +224,107 @@ module.exports = async function createConfigAsync() {
               type: "doc",
               docId: "about",
               position: "left",
-              label: "Docs",
+              label: "文档",
             },
             {
               to: "/features/",
               position: "left",
-              label: "Features",
+              label: "特性",
             },
             {
               to: "/use-cases/",
               position: "left",
-              label: "Use Cases",
+              label: "应用场景",
             },
             {
               type: "dropdown",
-              label: "Community",
+              label: "社区",
               position: "left",
               className: "community-dropdown",
               items: [
                 {
                   to: "/community",
                   activeBaseRegex: "^$",
-                  label: "Welcome",
+                  label: "欢迎",
                   className: "scroll-link scroll-welcome",
                   id: "scroll-welcome",
                 },
                 {
                   to: "/community#section-discussions",
                   activeBaseRegex: "^$",
-                  label: "Discussions",
+                  label: "讨论",
                   className: "scroll-link scroll-discussions",
                   id: "scroll-discussions",
                 },
                 {
                   to: "/community#section-governance",
                   activeBaseRegex: "^$",
-                  label: "Governance",
+                  label: "治理",
                   className: "scroll-link",
                   id: "scroll-governance",
                 },
                 {
                   to: "/community#section-community",
                   activeBaseRegex: "^$",
-                  label: "Meet the Community",
+                  label: "认识社区",
                   className: "scroll-link",
                   id: "scroll-community",
                 },
                 {
                   to: "/community#section-contribute",
                   activeBaseRegex: "^$",
-                  label: "Contribute",
+                  label: "参与贡献",
                   className: "scroll-link",
                   id: "scroll-contribute",
                 },
                 {
                   to: "/contribute/",
-                  label: "Contribution Guide",
+                  label: "贡献指南",
                 },
                 {
                   to: "https://github.com/apache/pulsar/wiki",
-                  label: "Wiki",
+                  label: "维基",
                 },
                 {
                   to: "https://github.com/apache/pulsar/issues",
-                  label: "Issue Tracking",
+                  label: "问题追踪",
                 },
               ],
             },
             {
               type: "dropdown",
-              label: "Learn",
+              label: "学习",
               position: "left",
               items: [
                 {
                   to: "/blog",
-                  label: "Blog",
+                  label: "博客",
                 },
                 {
                   to: "/books",
-                  label: "Books",
+                  label: "书籍",
                 },
                 {
                   to: "/case-studies",
-                  label: "Case Studies",
+                  label: "案例研究",
                 },
                 {
                   to: "/articles",
-                  label: "Articles",
+                  label: "文章",
                 },
                 {
                   to: "/presentations",
-                  label: "Presentations",
+                  label: "演讲",
                 },
                 {
                   to: "/events",
-                  label: "Events",
+                  label: "活动",
                 },
               ],
             },
             {
               to: "/download",
-              label: "Download",
+              label: "下载",
               position: "right",
               className: "navbar_download_button",
             },
@@ -322,35 +335,35 @@ module.exports = async function createConfigAsync() {
           links: [
             {
               items: [
-                { label: "Foundation", href: "https://www.apache.org/" },
+                { label: "基金会", href: "https://www.apache.org/" },
                 {
-                  label: "Events",
+                  label: "活动",
                   href: "https://www.apache.org/events/current-event.html",
                 },
               ],
             },
             {
               items: [
-                { label: "License", href: "https://www.apache.org/licenses/" },
+                { label: "许可证", href: "https://www.apache.org/licenses/" },
                 {
-                  label: "Thanks",
+                  label: "感谢",
                   href: "https://www.apache.org/foundation/thanks",
                 },
                 {
-                  label: "Sponsorship",
+                  label: "赞助",
                   href: "https://www.apache.org/foundation/sponsorship",
                 },
               ],
             },
             {
               items: [
-                { label: "Security", to: "/security" },
+                { label: "安全", to: "/security" },
                 {
-                  label: "Privacy",
+                  label: "隐私",
                   href: "https://www.apache.org/foundation/policies/privacy.html",
                 },
                 {
-                  label: "Contact",
+                  label: "联系我们",
                   to: "/contact",
                 },
               ],

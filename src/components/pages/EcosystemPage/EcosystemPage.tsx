@@ -17,15 +17,15 @@ const EcosystemPage: React.FC = () => {
 
   return (
     <Layout
-      title={`Ecosystem`}
-      description="Learn about the basics of using Apache Pulsar"
+      title={`生态系统`}
+      description="了解 Apache Pulsar 的生态工具与扩展"
       wrapperClassName="LandingPage"
     >
       <Page>
         <section className={s.Header}>
-          <h1>Ecosystem</h1>
-          <p>To build better streaming data pipelines and event-driven applications, you can use the powerful extensions to Pulsar, including <a href="/docs/next/io-overview">connectors</a>, protocol handlers, tools, and more. Additionally, you can develop applications using <a href="/docs/next/client-libraries">client libraries</a>.</p>
-          <p>This page lists both built-in and third-party tools. Note that some of the third-party tools were not tested throughly by the community, and may not work as expected. Only open source components with an <a href="https://opensource.org/licenses">OSI&nbsp;approved licenses</a> are allowed. </p>
+          <h1>生态系统</h1>
+          <p>要构建更优秀的流式数据管道和事件驱动应用，你可以使用 Pulsar 强大的扩展能力，例如 <a href="/docs/next/io-overview">Connector</a>、协议处理器、工具等。同时也可使用 <a href="/docs/next/client-libraries">客户端库</a> 开发应用。</p>
+          <p>本页面列出了内置与第三方工具。请注意，部分第三方工具尚未经过社区的全面验证，可能与预期不同。仅包含具有 <a href="https://opensource.org/licenses">OSI 认可许可证</a> 的开源组件。</p>
           <ContributeDataDrivenPage />
         </section>
 
@@ -38,11 +38,11 @@ const EcosystemPage: React.FC = () => {
                 list={categoryFilterOptions.map((option) => ({
                   type: 'item',
                   value: option,
-                  title: option === 'any' ? 'All Categories' : data.categoryLabels[option]
+                  title: option === 'any' ? '全部分类' : data.categoryLabels[option]
                 }))}
               />
 
-              <Input placeholder="Search" value={searchQuery} onChange={setSearchQuery} clearable />
+              <Input placeholder="搜索" value={searchQuery} onChange={setSearchQuery} clearable />
             </div>
 
             <div>

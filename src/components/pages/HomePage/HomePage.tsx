@@ -32,7 +32,7 @@ const HomePage = () => {
   return (
     <Layout
       title={"Apache Pulsar"}
-      description={"Apache Pulsar is an open-source, distributed messaging and streaming platform built for the cloud."}
+      description={"Apache Pulsar 是一款面向云环境构建的开源分布式消息与流式处理平台。"}
       wrapperClassName="LandingPage"
     >
       <div className={s.Page}>
@@ -47,8 +47,8 @@ const HomePage = () => {
           <section className={s.UseCases}>
             <div className={s.CommunityContent}>
               <div>
-                <h2>Pulsar use cases</h2>
-                <p>A combination of unique and common use cases sets Pulsar apart from other message brokers.</p>
+                <h2>Pulsar 使用场景</h2>
+                <p>独特与常见场景的组合让 Pulsar 在众多消息系统中脱颖而出。</p>
               </div>
               <div className={s.Slider}>
                 <BrowserOnly>
@@ -61,7 +61,7 @@ const HomePage = () => {
                             <h3>{scase.title}</h3>
                             <div className={s.SlideMB}>{scase.smallText}</div>
                             <div>
-                                <Button title='Read more' href={'/use-cases#case'+i} variant='transparentBlack' />
+                                <Button title='了解详情' href={'/use-cases#case'+i} variant='transparentBlack' />
                             </div>
                           </div>
                         </div>
@@ -77,8 +77,8 @@ const HomePage = () => {
             <div className={s.CommunityNumbersBlur} />
             <div className={s.CommunityContent}>
               <div>
-                <h2>Pulsar trusted community</h2>
-                <p>Join us and start contributing</p>
+                <h2>值得信赖的 Pulsar 社区</h2>
+                <p>加入我们，立即开始贡献</p>
               </div>
             </div>
             <div className={s.CommunityContent}>
